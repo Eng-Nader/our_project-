@@ -1,0 +1,250 @@
+ بسم الله الرحمن الرحيم النهارده هنبدا اول درس لينا مع البش مهندس عادل نسيم عارف ان الطريق طويل و صعب بسم مش صعب عليك نت قدها ي بطل 
+========================================================================================
+# include < iostream > => ضمن المدخلات 
+io => ( input , output )
+main => عباره عن الداله الرئيسيه ال البرنامج بيتنفز عندها  
+:: => scope reslution 
+cout ( keyword ) => لطبع الكلام علي شاشه ال console 
+return 0 => ان البرنامج بتاعي خلص لحد هنا اي حاجه بعد البرنامج مش هيتنفز 
+- Escape Sequence( سرش عن اي حاجه )
+
+\n => new line 
+\t => for 8  space between words 
+\a (alert, bell ) => بيخلي البرنامنج يعمل جرس 
+\b => remove one charachter 
+\r = > remove before words in the same line 
+\" => لطبع اتلكلمه بين double quotation
+\\ => Inserts a backslash character.
+\?=> Displays a single quotation mark.
+\ooo=>  display a octal number 
+\f => للتفريق بين الكلمات 
+
+- Variables vs Data type
+int , short , long =>  بيخزن ارقام صحيحه فقط 
+float , double => بيخزن ارقام عشريه و صحيحه
+// => comment 
+/**/ => comment 
+ string => بيخزن نص 
+ char => تخزين حروف
+ bool => بيخزن true ,false (0,1)
+ signed => postive and negative number 
+ un signed => postive number only 
+#include <string > =>  ع شان اضمن ال نص
+declration for variable = int x 
+ 1 not start number 
+ 2 not speacial character 
+ 3 not space 
+ 4  not name of keyword 
+ 5 start _,$   => as doller , under scoer 
+
+initialization for variable => int x = 10 ; 
+================================================
+- Priorities&Calculations
+================================================
+ عمليه الاسناد تتم اخر عمليه 
+1 ()
+2 *,/,%
+3 +,- 
+4 = 
+=====================================================
+- Basic Arithmetic&Casting
+====================================================
+عند تخزين قيمه عشريه داخل قيمه int  هيعمل اهمال للكسسر 
+  int + int = int 
+  int + float = float 
+  double + int = double 
+ ( big priority )
+
+ type casting  = > الغرض منو ان انا بحول نوع اللبيانات لكن م علي مستوي البرنامج كلو 
+  1 = int (variable)
+  2 = static_cast <data type>(variable)
+====================================================
+- Prefix and Postfix&Compound assignment
+====================================================
+  1 = x+=10 -> x=x+10 
+  2 = x -=10 -> x = x-10 
+  3 = x*=10 -> x=x*10 
+  4 = x /=10 -> x = x/10 
+  5 = x %=10 -> x = x%10 
+ incremant (prefix ,postifix ) -> x++,++x 
+ decremant (prefix ,postifix ) -> x--,--x  
+
+=========================================
+Variable Scope (Local vs Global) 
+=========================================
+ لو انا عاوزاعرف اكتر من متغير له نمفس الاسم ف انا لازم افصل بينهم بscope
+local variable -> علي مستوي scope 
+global variable -> علي مستوي البرنامج كلو 
+ لو انا سبقت المتغير ب :: ف هنا قثده علي global variable
+===================================================================
+ - Selection Statement(if-if else -if else if)
+===================================================================
+
+ -compiler excution line by line 
+relation opreator 
+(>,<,>=,<=,==,!=)
+ if x%2==0 -> is even 
+nested if 
+if جواهif 
+خلي بالك من else بتاعت if 
+-> لو اشلرط جوا if ارقام ف كلوبيطلع true عدا ال 0 بيطلع false 
+
+Logical Operators(AND,OR,NOT) / Shortest if
+and , or , not -> لو انا عاوز اجمع اكتر من شرطجوا ال if 
+ &&,||.!
+
+short if 
+cout << (5>10) ?true :false
+variable = (condition) ? expressionTrue : expressionFalse;
+and لازم الشرطين يكونو ب true 
+or لام الشرطين يكونو ب false
+=============================================
+switch case - > تتنفز علي اساس نتيجه معينه 
+============================================
+defult ->بتتنفز لما ال switch condation  is not find 
+تقبل ارقام صحيحه فقط 
+break -> تعمل علي كسر switch statment 
+ممكن تستقبل حروف عادي 
+not deal with range 
+================================================
+- While loop / Do while loop
+===============================================
+تستحدم ع شان لو انا اكرر الكلمه عدد من المرات
+ ضروري جدا increment in while to avoid infinte loop 
+inatail value is nessery 
+الفرق بين do و while ان ال body  ال do بيتنفز الاول قبل ال condation يعن بتتنفز علي الاقل مره واحده 
+============================================
+- For loop
+===========================================
+لازم ضروري جدا ان يكون فيه 2 ; 
+لازم نعطي initali value فfor loop 
+الميزه ان هيا بممكن نعمل declration varibale and initliazion in for loop 
+body is can in for loop statment  
+لو انا عاوز اخد اكتر من قيمه من الuser ف  انا بحطه جو for loop
+
+size_t = int -> عباره عن data type شبه ال int 
+-> بكون unsigned يعن م بياخد قيم سالبه  
+-> ممكن نختصر ال for loop ب ال body بنتاعها ف جمله واحده 
+كشكل تجميلي وبتتحط بعد تاني ; وبنربط بينها وبين ال increment ب ,
+ for loop 2 ; واي حاجه بتفصل بينها ب , 
+continue -> بتعمل skip  للشرط 
+break -> بتكسر اللوب 
+=======================================================
+- Nested loop
+======================================================
+for loop in for loop 
+يعن ممكن نلاقي loop اي نوع منه جوا اي نوع من loop
+draw shape 
+outer loop -> row 
+inner loop -> column 
+(اختبار حاول ترسم شكل triangle )
+=========================================
+function 
+========================================
+عاوز احسب المجموع او المتوسط ف انا بعمل function  لكل واحده فيهم بحيث ان انا اسهل علي user 
+بتعطيني جماليه للكود 
+بنكتب ال function outside the main 
+int sum () {} 
+int -> return value type 
+sum -> function name 
+inside prenscescs -> paremeter 
+{}-> inside defntion of the function 
+function call in the main function 
+لازم ضروري جدا ان ال function ترجع قيمه معينه لازم يكون فيه return in the function 
+viod function return null value in example if i want to print (nader)
+void function not need return ,not need parmeter 
+لو حطينا ال function after main لازم نحط decleration before the main 
+main function -> الداله الرئيسيه ال البرنامج بيعمل عندها run 
+مهما لقيت من function لازم اول حاجه نشوفها هيا ال main function 
+========================================================
+built in function 
+====================================================== 
+sin() 
+cos()
+tan()
+sqrt()-> الجزر التربيعي 
+ceil()-> اكبر عدد صحيح 
+floor()-> اقل عدد صحيح 
+log() -> لوغاريتم الرقم 
+log10()-> لوغاريتم الرقم للاساس 10 
+pow (الاساس و الاس )-> الاس لرقم بياخد الاساس و الاس 
+fabs() -> بيجيب القيمه المطبقه 
+fmod( 2 argument )-> بيجيب باقي القسمه 
+max(2 argument)-> بتجيب اكبر قيمه 
+min(2argument)-> بتجيب اصغر قيمه 
+لو انا عاوز اجيب اكبر رقم بين 3 ارقام max (max(3argument ))
+swap()-> بتعمل تبديل بين قيم المتغيرات 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- 
+
+
+
+
+  
+  
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
